@@ -37,8 +37,7 @@ def cam_server_proc():
         while is_connected:
             conn, addr = s.accept()
             print(f"Connected by {addr}")
-            count = 0
-            stime = starttime()
+
             while is_connected:
                 chunks = []
                 # print("Request Capture!!")
@@ -50,9 +49,7 @@ def cam_server_proc():
                         chunks += list(data)
                         # print("Last(2) = %02x %02x" % (int(chunks[-2]), int(chunks[-1])))
                         if chunks[-1] == 0xD9 and chunks[-2] == 0xFF:
-                            elapsed = endtime(stime) / 1000
-                            count += 1
-                            print("Received EOF (%d) / FPS(%02f) / size(%d)" % (count, count / elapsed, len(chunks)))
+                            #print("Received EOF (%d)" % len(chunks))
 
                             # """
                             stream = io.BytesIO(bytes(chunks))
@@ -67,13 +64,7 @@ def cam_server_proc():
                                 is_connected = False
                                 exit()
                                 break
-                            #f = open("./captures/%d.jpeg" % count, "wb")
-                            #f.write(bytes(chunks))
-                            #f.close()
                             #"""
-
-                            # img = numpy.array(chunks)
-                            # cv2.imwrite("./captures/%d.jpeg" % count, img)
                             break
 
                     # conn.sendall(data)
@@ -83,10 +74,22 @@ process = threading.Thread(target=cam_server_proc, args=())
 process.start()
 #"""
 
+stime = starttime()
+count = 0
 while cv2.waitKey(1) != 27:
     if not frames.empty():
-        cv2.imshow("Captured", frames.get(True))
+        elapsed = endtime(stime) / 1000
+        count += 1
+        img = frames.get(True)
+
+        # f = open("./captures/%d.jpeg" % count, "wb")
+        # f.write(bytes(chunks))
+        # f.close()
+
+        cv2.putText(img, "FPS %0.2f" % (count / elapsed), (5, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 1, 2)
+        cv2.imshow("Captured", img)
+
+        # TODO: Segmentation
 
 is_connected = False
 cv2.destroyAllWindows()
-exit()
