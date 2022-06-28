@@ -16,7 +16,7 @@ For the same, we need to configure SPIs properly for ArduCam OV2640 Module and W
 
 <img src="./images/W5100S-EVB-Pico-Pinout.png" alt="W5100S-EVB-Pico">
 
-The WIZnet W5100S-EVB-Pico board uses default SPI0 for the internal ethernet chip W5100S. It uses GPIO pin 21~22 and 24~27.<p>
+The WIZnet W5100S-EVB-Pico board uses default SPI0 for the internal ethernet chip W5100S. It uses GPIO pin 21-22 and 24-27.<p>
 The ArduCam provides <a href="https://www.arducam.com/docs/pico/arducam-camera-module-for-raspberry-pi-pico/spi-camera-for-raspberry-pi-pico/">a document and source codes "SPI Camera for Raspberry Pi Pico"</a> and it also uses SPI0. To avoid the confliction, this project uses SPI1 for the ArduCam OV2600 Module.
 
 
