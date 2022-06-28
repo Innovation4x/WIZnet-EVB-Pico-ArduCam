@@ -1,2 +1,5 @@
 # EVB-PICO-ARDUCAM
-Created
+
+
+<img style="width:25rem" src="./images/Diagram.png" alt="product">
+
