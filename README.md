@@ -38,7 +38,7 @@ ArduCam OV2640 Module requires CS, MOSI, MISO, SCLK pins for SPI connection, and
 1. SDA --> GPIO 8
 2. SCL --> GPIO 9
 
-#References
+# References
 
 1. https://www.wiznet.io/product-item/w5100s-evb-pico/
 2. https://www.arducam.com/docs/pico/arducam-camera-module-for-raspberry-pi-pico/spi-camera-for-raspberry-pi-pico/
