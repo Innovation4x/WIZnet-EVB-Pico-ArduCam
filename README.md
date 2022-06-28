@@ -5,7 +5,7 @@ This project was implemented on Arduino for video capturing and sending part. An
 
 **Diagram**
 
-<img src="./images/Diagram.jpg" alt="Diagram">
+<img style="width:50rem" src="./images/Diagram.jpg" alt="Diagram">
 
 The W5100S-EVB-Pico board captures JPEG images from the ArduCam OV2640 Module and sends the JPEG images to the TCP/IP socket server through W5100S ethernet continuously. The receiver on the Raspberry pi receives the jpeg image as a video frame from the TCP/IP socket connection.<p>
 For the same, we need to configure SPIs properly for ArduCam OV2640 Module and W5100S ethernet chip.
@@ -14,7 +14,7 @@ For the same, we need to configure SPIs properly for ArduCam OV2640 Module and W
 
 **WIZnet W5100S-EVB-Pico**
 
-<img src="./images/W5100S-EVB-Pico-Pinout.png" alt="W5100S-EVB-Pico">
+<img style="width:50rem" src="./images/W5100S-EVB-Pico-Pinout.png" alt="W5100S-EVB-Pico">
 
 The WIZnet W5100S-EVB-Pico board uses default SPI0 for the internal ethernet chip W5100S. It uses GPIO pin 21-22 and 24-27.<p>
 The ArduCam provides <a href="https://www.arducam.com/docs/pico/arducam-camera-module-for-raspberry-pi-pico/spi-camera-for-raspberry-pi-pico/">a document and source codes "SPI Camera for Raspberry Pi Pico"</a> and it also uses SPI0. To avoid the confliction, this project uses SPI1 for the ArduCam OV2600 Module.
@@ -22,7 +22,7 @@ The ArduCam provides <a href="https://www.arducam.com/docs/pico/arducam-camera-m
 
 **ArduCam Mini 2MP Plus - SPI Camera Module - Pin Definition**
 
-<img src="./images/AruduCam-Mini-2MP-Plus-SPI-Camera-Module-Pin.jpg" alt="AruduCam-Mini-2MP-Plus-SPI-Camera-Module">
+<img style="width:50rem" src="./images/AruduCam-Mini-2MP-Plus-SPI-Camera-Module-Pin.jpg" alt="AruduCam-Mini-2MP-Plus-SPI-Camera-Module">
 
 ArduCam OV2640 Module requires CS, MOSI, MISO, SCLK pins for SPI connection, and SDA, SCL pins for I2C connection. This project modified the source code of ArduCam to use SPI1.
 
