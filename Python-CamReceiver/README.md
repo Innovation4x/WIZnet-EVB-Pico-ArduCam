@@ -46,6 +46,7 @@ port number to accept connections on from clients. It should be an integer from 
 is_connected flag is used for indicating it.
 Note: Host can be a hostname, IP address, or empty string. If an IP address is used, host
 should be an IPv4-formatted address string.
+
 When it is connected s.accept() function in line 36 returns a socket descriptor that is
 connected to your TCP server. In this case, it returns a tuple of objects. The first parameter,
 conn, is a socket object that you can use to send data to and receive data from the client that
