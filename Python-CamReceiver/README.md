@@ -71,8 +71,7 @@ Start method starts the thread’s activity. It must be called at most once per 
 arranges for the object’s run () method to be invoked in a separate thread of control. This
 method will raise a RuntimeError if called more than once on the same thread method. The
 self. process turns your string into a list of characters, passing them to the processLine
-function. The start() method creates and starts the thread on line 60. The thread executes the
-# cam_server_proc() method.
+function. The start() method creates and starts the thread on line 60. The thread executes the cam_server_proc() method.
 This function continuously runs a while loop that reads a frame from the video stream and
 stores it in the class instance’s frame attribute, as long as the stopped flag isn’t set.
 Stop method stops the thread’s activity. is_connected flag is set False to stop the connection
