@@ -5,7 +5,7 @@ This project was implemented on Arduino for video capturing and sending part. An
 
 **Diagram**
 
-<img style="width:25rem" src="./images/Diagram.jpg" alt="Diagram">
+<img src="./images/Diagram.jpg" alt="Diagram">
 
 The W5100S-EVB-Pico board captures JPEG images from the ArduCam OV2640 Module and sends the JPEG images to the TCP/IP socket server through W5100S ethernet continuously. The receiver on the Raspberry pi receives the jpeg image as a video frame from the TCP/IP socket connection.<p>
 For the same, we need to configure SPIs properly for ArduCam OV2640 Module and W5100S ethernet chip.
