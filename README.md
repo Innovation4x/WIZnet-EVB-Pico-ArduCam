@@ -45,7 +45,7 @@ This project has two parts for video capturing & sending and receiving.
 **Video capturing and sending part**
 
 1. **<a href="./ArduCamEthernet/ArduCamEthernet.ino">ArduCamEthernet/ArduCamEthernet.ino</a>** is an Arduino code for video capturing and sending. It initiates ArduCam driver and establishes a TCP/IP socket connection to the video receiver part. The IP address of the video receiver should be changed accordingly.
-2. **<a href="./ArduCamEthernet/ArduCAM_OV2650.cpp">ArduCamEthernet/ArduCAM_OV2650.cpp</a>** is a driver for ArduCam Mini 2MP Plus - SPI Camera Module. SPI port and I2C port are configurable so that any SPIs and I2Cs can be used. Currently the resolution of captured image is 320x240 (WxH) pixels. To minimize the size of image, the JPEG is used as a default format.
+2. **<a href="./ArduCamEthernet/ArduCAM_OV2640.cpp">ArduCamEthernet/ArduCAM_OV2640.cpp</a>** is a driver for ArduCam Mini 2MP Plus - SPI Camera Module. SPI port and I2C port are configurable so that any SPIs and I2Cs can be used. Currently the resolution of captured image is 320x240 (WxH) pixels. To minimize the size of image, the JPEG is used as a default format.
 
 **Video receiving part**
 
