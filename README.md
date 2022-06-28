@@ -44,12 +44,12 @@ This project has two parts for video capturing & sending and receiving.
 
 **Video capturing and sending part**
 
-1. ArduCamEthernet/ArduCamEthernet.ino is an Arduino code for video capturing and sending. It initiates ArduCam driver and establishes a TCP/IP socket connection to the video receiver part. The IP address of the video receiver should be changed accordingly.
-2. ArduCamEthernet/ArduCAM_OV2650.cpp is a driver for ArduCam Mini 2MP Plus - SPI Camera Module. SPI port and I2C port are configurable so that any SPIs and I2Cs can be used. Currently the resolution of captured image is 320x240 (WxH) pixels. To minimize the size of image, the JPEG is used as a default format.
+1. **<a href="./ArduCamEthernet/ArduCamEthernet.ino">ArduCamEthernet/ArduCamEthernet.ino</a>** is an Arduino code for video capturing and sending. It initiates ArduCam driver and establishes a TCP/IP socket connection to the video receiver part. The IP address of the video receiver should be changed accordingly.
+2. **<a href="./ArduCamEthernet/ArduCAM_OV2650.cpp">ArduCamEthernet/ArduCAM_OV2650.cpp</a>** is a driver for ArduCam Mini 2MP Plus - SPI Camera Module. SPI port and I2C port are configurable so that any SPIs and I2Cs can be used. Currently the resolution of captured image is 320x240 (WxH) pixels. To minimize the size of image, the JPEG is used as a default format.
 
 **Video receiving part**
 
-1. Python-CamReceiver/CamReceiver.py is a Python code for video receiving through a TCP/IP socket connection. It initiates a thread to receive captured images in background. The TCP/IP socket listener waits a connection request from the video sender. Once the connection is established, it receives JPEG images and stores it into a frame queue continuously. A main function can retrieve the received video frames from the frame queue.
+1. **<a href="./Python-CamReceiver/CamReceiver.py">Python-CamReceiver/CamReceiver.py</a>** is a Python code for video receiving through a TCP/IP socket connection. It initiates a thread to receive captured images in background. The TCP/IP socket listener waits a connection request from the video sender. Once the connection is established, it receives JPEG images and stores it into a frame queue continuously. A main function can retrieve the received video frames from the frame queue.
 
 # References
 
