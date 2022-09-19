@@ -66,7 +66,10 @@ class CamReceiver:
         #self.process.join()
 
     def get(self, flag=True):
-        return self.frames.get(flag)
+        ret = self.frames.get(flag)
+        while not self.frames.empty():
+            ret = self.frames.get(flag)
+        return ret
 
     def empty(self):
         return self.frames.empty()
